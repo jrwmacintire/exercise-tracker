@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Exercise Tracker | Free Code Camp</title>
+      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="style.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+      <div class="container">
+         <h1>JRWM3's Exercise tracker</h1>
+          <form action="/api/exercise/new-user" method="post">
+            <h3>Create a New User</h3>
+            <label for="username"><strong>username:</strong></label>
+            <input id="uname" type="text" name="username" placeholder="username">
+            <input type="submit" value="Submit">
+          </form>
+          <form action="/api/exercise/add" method="post">
+            <h3>Add an Exercise to a User</h3>
+            <label for="userId"><strong>userId:</strong></label>
+            <input id="uid" type="text" name="userId" placeholder="userId*">
+            <label for="description"><strong>description:</strong></label>
+            <input id="desc" type="text" name="description" placeholder="description*">
+            <label for="duration"><strong>duration:</strong></label>
+            <input id="dur" type="text" name="duration" placeholder="duration* (mins.)">
+            <label for="date"><strong>date:</strong></label>
+            <input id="dat" type="text" name="date" placeholder="date (yyyy-mm-dd)">
+            <input type="submit" value="Submit">
+          </form>
+          <p><strong>GET</strong> - <code>/api/exercise/log?userId={userId}</code> - Returns an array of the specified user's logged exercises.</p>
+          <p><strong>GET</strong> - <code>/api/exercise/users</code> - Returns an array of all users.</p>
+          <p><strong>POST</strong> - <code>/api/exercise/new-user</code> - Adds a new user to the exercise tracker.</p>
+          <p><strong>POST</strong> - <code>/api/exercise/add</code> - Adds a new exercise log to the specified user.</p>
+      </div>
+   </body>
+
+</html>
